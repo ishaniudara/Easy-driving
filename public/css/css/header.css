@@ -1,0 +1,149 @@
+.navbar-brand{
+	font-size: 50px;
+}
+nav{
+	color: gray;
+}
+.carousel-item{
+	height: 100vh;
+	min-height: 300px;
+	background: no-repeat center center scroll;
+	-webkit-background-size:cover;
+	background-size: cover;
+
+}
+.carousel-caption{
+	bottom: 220px;
+}
+.carousel-caption h5{
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-weight: 300px;
+	color: #ffffff;
+}
+.carousel-caption p{
+	font-size: 20px;
+	margin: auto;
+	width: 60%;
+	line-height: 1.6;
+	font-family: poppins;
+}
+.navbar-nav a{
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ffff;
+
+}
+.navbar-light .navbar-nav .nav-link{
+	color: white;
+	font-weight: bold;
+
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+	color:#1a3291;
+}
+.navbar-light .navbar-brand{
+	font-size: 60px;
+	font-weight: bold;
+	color: white;
+	font-family: Roboto;
+}
+.nav-link{
+	padding: 10px;
+}
+img{
+	opacity:0.7;
+	filter: alpha(opacity=50);
+}
+.carousel-inner{
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.welcome h3 {
+	font-size: 40px;
+	font-weight: bold;
+	font-color: red;
+	padding-top: 40px;
+
+}
+.welcome h6{
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+.welcome p{
+	line-height: 30px;
+	padding-top: 40px;
+	font-family: roboto;
+	font-size: 20px;
+
+}
+#footer{
+	background:#3c3d40;
+	color: #8f929c;
+	font-family:roboto; 
+}
+#footer .footer-top{
+	padding-top: 20px;
+
+}
+#footer .container1{
+	background-color: #2f3033;}
+
+	#footer .footer-info h3{
+		color: #082d61;
+	}
+	.container1{
+		padding-top: 10px;
+		color: #112869;
+	}
+	.container1 .credit{
+		color: #113d69;
+
+	}
+	.footer .footer-top .sociallinks a{
+		font-size: 14px;
+		display: inline-block;
+
+
+color:#fff;
+border-radius:50%;
+
+width:36px;
+height:36px;
+transition:0.3s;
+background-color: #0469cf;
+}
+
+@media only screen and (min-width: 767px){
+	.collapse .navbar-collapse{
+		background: red;
+		font-size: 40px;
+	}
+
+}
+.col-lg-4 .col-md-6 .footer-info i{
+	font-size: 12px;
+	border-radius: 50%;
+	border: 1px solid blue;
+	padding: 2px;
+	background-color: blue;
+	color: white;
+
+}
+.sociallinks i{
+	font-size: 20px;
+	border-radius: 50%;
+	border: 1px solid  #1478c4;
+	padding: 2px;
+	background-color:  #1478c4;
+	color: white;
+	margin-top: 80px;
+	margin-right: 20px;
+}
+.sociallinks i:hover{
+	color:  #1478c4;
+	background-color: white;
+}
+
