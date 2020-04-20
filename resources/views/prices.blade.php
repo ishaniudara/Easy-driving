@@ -2,11 +2,32 @@
 <html>
 <head>
 	<title>prices</title>
+	<link rel="shortcut icon" href="images/t.jpg">
 	 <link rel="stylesheet" type="text/css" href="css/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/css/bootstrap.js">
 <link rel="stylesheet" type="text/css" href="css/css/com.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	 <style type="text/css">
+	   i{
+	font-size: 30px;
+	border-radius: 50%;
+	border: 1px solid #1d46ad;
+	padding:  3px;
+	background-color: #1d46ad;
+	color: #92a8e0;
+	padding:10px;
+
+}
+      i:hover{
+	font-size: 30px;
+	border-radius: 50%;
+	border: 1px solid #92a8e0;
+	padding:  3px;
+	background-color:#92a8e0 ;
+	color: #1d46ad;
+
+}
+
       .head{
       	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("images/5.jpg");
       	height: 500px;
@@ -28,7 +49,7 @@
 <body>
 
 	<div class="head">
-		<h2 class="text-center">PRICES</h2>
+		<h2 class="text-center" style="letter-spacing: 5px; font-family:'Bebas Neue';">PRICES</h2>
 	</div>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -61,7 +82,7 @@
         <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link btn btn-primary" href="#" >LOGIN</a>
+        <a href="{{ url('/login') }}" class="btn" style="border:3px solid #183bc7; color:#183bc7; border-radius:10px; font-weight:300px;">LOGIN</a>
       </li>
 
     </ul>
@@ -211,16 +232,16 @@
 				<div class="col-lg-4 col-md-6 footer-info">
 					<h3>VIRAJA Drining School</h3>
 					<p> "A" Grade Driving school<br>
-						<i class="fas fa-home mr-3"></i>
+						
 						<strong>125,Main Street,Akuressa</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>0413411402</strong>
 						<br>
-						<i class="fas fa-gmail mr-3"></i>
+						
 						<strong>virajadrivingschool@gmail.com</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>Reg No: DS 234</strong>
 					</p>
 
@@ -229,16 +250,16 @@
 					<h5>Deniyaya Branch</h5>
 					<hr style="background-color: blue;">
 				<p> 
-						<i class="fas fa-home mr-3"></i>
+					
 						<strong>125,Main Street,Akuressa</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>0413411402</strong>
 						<br>
-						<i class="fas fa-gmail mr-3"></i>
+						
 						<strong>virajadrivingschool@gmail.com</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>Reg No: DS 234</strong>
 					</p>
 				</div>

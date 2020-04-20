@@ -3,11 +3,32 @@
 <head>
 
 	<title>services</title>
+	<link rel="shortcut icon" href="images/t.jpg">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/css/bootstrap.js">
 <link rel="stylesheet" type="text/css" href="css/css/com.css">
 <style type="text/css">
+  .sociallinks i{
+	font-size: 30px;
+	border-radius: 50%;
+	border: 1px solid #1d46ad;
+	padding:  3px;
+	background-color: #1d46ad;
+	color: #92a8e0;
+	padding:10px;
+
+}
+      .sociallinks  i:hover{
+	font-size: 30px;
+	border-radius: 50%;
+	border: 1px solid #92a8e0;
+	padding:  3px;
+	background-color:#92a8e0 ;
+	color: #1d46ad;
+
+}
+
 	.icon{
 		font-size: 40px;
 		margin: 20px auto;
@@ -66,7 +87,8 @@
       }
       .row{
       	margin-bottom: 40px;
-      }
+	  }
+	
 </style>
 </head>
 <body>
@@ -87,7 +109,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/home') }}">Home </a>
+        <a class="nav-link" href="{{ url('/') }}">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/aboutus') }}">About</a>
@@ -102,7 +124,7 @@
         <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link btn btn-primary" href="#" >LOGIN</a>
+        <a  href="{{ url('/login') }}" class="btn"style="border:3px solid #183bc7; color:#183bc7; border-radius:10px; font-weight:300px;">LOGIN</a>
       </li>
 
     </ul>
@@ -112,8 +134,9 @@
 
 </nav>
 	<div class="head">
-		<h2 class="text-center">SERVICES</h2>
+		<h2 class="text-center" style="letter-spacing: 5px; font-family:'Bebas Neue';">SERVICES</h2>
 	</div>
+	<div class="jumbotron">
 	<div class="container text-center">
 		<div class="row">
 			<div class="col-md-3">
@@ -142,7 +165,7 @@
 			</div>
 						<div class="col-md-3">
 				<div class="icon">
-			<i class="fa fa-traffic-light"></i>
+				<i class="fa fa-bolt"></i>
 				</div>
 				<h3>Road Sign Knowledge</h3>
 				<p>We are ready to give all knowledge about road signs for exams.</p>
@@ -159,7 +182,7 @@
 			</div>
 						<div class="col-md-3">
 				<div class="icon">
-					<i class=""></i>
+				<i class="fa fa-car"></i>
 				</div>
 				<h3>Threewheelers</h3>
 				<p>we are provided threewheeler training by professional instrctors.</p>
@@ -167,7 +190,7 @@
 			</div>
 						<div class="col-md-3">
 				<div class="icon">
-					<i class="fas fa-book-open"></i>
+					<i class="fa fa-book"></i>
 				</div>
 				<h3>Exam</h3>
 				<p>Now you can get ready for exams by participating our lectues sessions.</p>
@@ -180,7 +203,7 @@
 				<h3>Bus</h3>
 				<p>we are provided bus training within short period.</p>
 
-			</div>
+			</div></div>
 		</div>
 	</div>
 	<footer id="footer">
@@ -189,16 +212,16 @@
 				<div class="col-lg-4 col-md-6 footer-info">
 					<h3>VIRAJA Drining School</h3>
 					<p> "A" Grade Driving school<br>
-						<i class="fas fa-home mr-3"></i>
+						
 						<strong>125,Main Street,Akuressa</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>0413411402</strong>
 						<br>
-						<i class="fas fa-gmail mr-3"></i>
+						
 						<strong>virajadrivingschool@gmail.com</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>Reg No: DS 234</strong>
 					</p>
 
@@ -207,16 +230,16 @@
 					<h5>Deniyaya Branch</h5>
 					<hr style="background-color: blue;">
 				<p> 
-						<i class="fas fa-home mr-3"></i>
+						
 						<strong>125,Main Street,Akuressa</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+					
 						<strong>0413411402</strong>
 						<br>
-						<i class="fas fa-gmail mr-3"></i>
+						
 						<strong>virajadrivingschool@gmail.com</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>Reg No: DS 234</strong>
 					</p>
 				</div>

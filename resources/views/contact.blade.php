@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>Contact Us</title>
+	<link rel="shortcut icon" href="images/t.jpg">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	 <link rel="stylesheet" type="text/css" href="css/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/css/bootstrap.js">
 <link rel="stylesheet" type="text/css" href="css/css/com.css">
+
 <style type="text/css">
 	   .address p{
 		color: #1478c4;
@@ -28,7 +30,7 @@
 	}
 
       .head{
-      	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("images/2.jpg");
+      	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("images/10.jpg");
       	height: 500px;
       	background-size: cover;
       	background-position: center center;
@@ -45,12 +47,13 @@
       }
      
        i{
-	font-size: 30px;
+	font-size: 50px;
 	border-radius: 50%;
 	border: 1px solid #1d46ad;
 	padding:  3px;
 	background-color: #1d46ad;
 	color: #92a8e0;
+	padding:10px;
 
 }
        i:hover{
@@ -84,7 +87,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/home') }}">Home </a>
+        <a class="nav-link" href="{{ url('/') }}">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/aboutus') }}">About</a>
@@ -99,7 +102,7 @@
         <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link btn btn-primary" href="#" >LOGIN</a>
+	   <a href="{{ url('/login') }}"  class="btn"style="border:3px solid #183bc7; color:#183bc7; border-radius:10px; font-weight:300px;">LOGIN</a>
       </li>
 
     </ul>
@@ -109,7 +112,7 @@
 
 </nav>
 	<div class="head">
-		<h2 class="text-center">CONTACT</h2>
+		<h2 class="text-center" style="letter-spacing: 5px; font-family:'Bebas Neue';">CONTACT</h2>
 	</div>
 <div class="Container">
 	<div class="row">
@@ -121,28 +124,46 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h3>Send Your Inquiries</h3>
-				<form action="#" method="post">
-					<div class="form-group">
-						<label for="Name">Name</label>
-						<input type="text" class="form-control" id="name">
+				<form action="/enquir" method="post">
+				{{csrf_field()}}
+				<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+						<label for="name">Name</label>
+						<input type="text" class="form-control" name="name">
+						@if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <p style="color:red;">{{ $errors->first('name') }}</p>
+                                    </span>
+                                @endif
 					</div>
-					<div class="form-group">
+					<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 						<label for="email">Email</label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control" name="email">
+						@if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <p style="color:red;">{{ $errors->first('email') }}</p>
+                                    </span>
+                                @endif
 					</div>
-					<div class="form-group">
-						<label for="Phone">Phone</label>
-						<input type="text" class="form-control" id="phone">
-					</div>
-					<div class="form-group">
+					
+					<div class="form-group{{ $errors->has('subject') ? ' has-error' : '' }}">
 						<label for="Subject">Subject</label>
-						<input type="text" class="form-control" id="Subject">
+						<input type="text" class="form-control" name="subject">
+						@if ($errors->has('subject'))
+                                    <span class="help-block">
+                                        <p style="color:red;">{{ $errors->first('subject') }}</p>
+                                    </span>
+                                @endif
 					</div>
-				<div class="form-group">
+				<div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">
 	
 
 						<label for="message">Message</label>
-									<textarea class="form-control" rows="5" cols="15"></textarea>
+									<textarea class="form-control" rows="5" cols="15" name="message"></textarea>
+									@if ($errors->has('message'))
+                                    <span class="help-block">
+                                        <p style="color:red;">{{ $errors->first('message') }}</p>
+                                    </span>
+                                @endif
 								</div>
 								<div class="form-group text-center">
 			

@@ -2,11 +2,68 @@
 <html>
 <head>
 	<title>About Us</title>
+	<link rel="shortcut icon" href="images/t.jpg">
 	<link rel="stylesheet" type="text/css" href="css/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/css/com.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/css/bootstrap.js">
 	<style type="text/css">
+
+	.abcon {
+		height:450px;
+		margin-right:px;
+		width:300px;
+		border-top:1px solid #17478f;
+	
+		box-shadow: 2px 3px 4px 2px #bdc3c7; 
+		margin-right:160px;
+		padding-top:30px;
+		margin-bottom:20px;
+		border-radius:5px;	
+
+	}
+	.abicon i{
+		font-size: 50px;
+	color: #425fbd;
+	padding-bottom:30px;
+
+
+
+	}
+	.abcon:hover{
+		border-top:3px solid #17478f;
+		background-color:#dee0e3;
+		height:450px;
+		
+		margin-right:px;
+		width:300px;
+	
+		box-shadow: 2px 3px 4px 2px #bdc3c7; 
+		margin-right:160px;
+		padding-top:30px;
+		
+		
+
+	}
+	.sociallinks i{
+	font-size: 20px;
+	border-radius: 50%;
+	border: 1px solid #1d46ad;
+	padding:  3px;
+	background-color: #1d46ad;
+	color: #92a8e0;
+	padding:10px;
+
+}
+      .sociallinks i:hover{
+	font-size: 20px;
+	border-radius: 50%;
+	border: 1px solid #92a8e0;
+	padding:  3px;
+	background-color:#92a8e0 ;
+	color: #1d46ad;
+
+}
 		.con h3{
 			color: black;
 			font-weight: 500;
@@ -62,7 +119,14 @@
       	padding-top: 200px;
       	font-weight: 600;
       	font-size: 50px;
-      }
+	  }
+	  .bk{
+		background-image: url("images/bk.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+	  }
 	
 	</style>
 </head>
@@ -83,7 +147,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/home') }}">Home </a>
+        <a class="nav-link" href="{{ url('/') }}">Home </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="{{ url('/aboutus') }}">About</a>
@@ -100,7 +164,7 @@
         
       </li>
        <li class="nav-item">
-        <a class="nav-link btn btn-primary" href="#" >LOGIN</a>
+        <a href="{{ url('/login') }}"  class="btn" style="border:3px solid #183bc7; color:#183bc7; border-radius:10px; font-weight:300px;">LOGIN</a>
       </li>
 
     </ul>
@@ -112,8 +176,9 @@
 
 	
 	<div class="head">
-		<h2 class="text-center">ABOUT</h2>
+		<h2 class="text-center" style="letter-spacing: 5px; font-family:'Bebas Neue';"">ABOUT</h2>
 	</div>
+	<div class="bk">
 <div class="container">
 	<div class="con center">
 		<h3>Who we are?</h3>
@@ -122,6 +187,41 @@
 	<div class="con center">
 		<h3>Why We Special?</h3>
 		<p class="text-justify">Getting your driving license is a millstone in your life. Since the mpment you sit on the driver position our concentrate on you to train & improve your driving skills. We have great squad of instrctors who will teach you easy tips to get through your driving practical test on the first attempt. You may be a just after 18 or a busy person with ypur work. That's why we offer flexible training hours to you to get your license easily. all vehicles are comportable & well mainteined. Trainings will not happen on cloistral roads on a silent area. all the trains will do on public streets & roads to make you a road ready driver.</p>
+	</div>
+	<div class="row">
+	<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+	
+	<div class="abcon">
+	<div class="abicon">
+	<i class="fa fa-eye"></i></div>
+	<h3 style="color:#1039a1">OUR VISION</h3>
+	<p style="color:gray;">Delightful life for everyone through affordable, state-of-the-art and high-quality technological innovations</p>
+	</div>
+
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+	
+	<div class="abcon">
+	<div class="abicon">
+	<i class="fa fa-address-card"></i></div>
+	<h3 style="color:#1039a1">OUR PASSION</h3>
+	<p style="color:gray;">Delightful life for everyone through affordable, state-of-the-art and high-quality technological innovations</p>
+	</div>
+
+	</div>
+
+
+	<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+	<div class="col-md-12">
+	<div class="abcon">
+	<div class="abicon">
+	<i class="fa fa-arrows-alt"></i></i></div>
+	<h3 style="color:#1039a1">OUR MISSION</h3>
+	<p style="color:gray;">Delightful life for everyone through affordable, state-of-the-art and high-quality technological innovations.Delightful life for everyone through affordable, state-of-the-art and high-quality technological innovations</p>
+	</div>
+</div>
+	</div>
+	</div>
 	</div>
 	<div class="team">
 		<h2 class="text-center">Our Team<br></h2><h6 class="text-center" style="color:gray; ">The power of professional Instrctors</h6>
@@ -160,16 +260,16 @@
 				<div class="col-lg-4 col-md-6 footer-info">
 					<h3>VIRAJA Drining School</h3>
 					<p> "A" Grade Driving school<br>
-						<i class="fas fa-home mr-3"></i>
+					
 						<strong>125,Main Street,Akuressa</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>0413411402</strong>
 						<br>
-						<i class="fas fa-gmail mr-3"></i>
+						
 						<strong>virajadrivingschool@gmail.com</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>Reg No: DS 234</strong>
 					</p>
 
@@ -178,16 +278,16 @@
 					<h5>Deniyaya Branch</h5>
 					<hr style="background-color: blue;">
 				<p> 
-						<i class="fas fa-home mr-3"></i>
+						
 						<strong>125,Main Street,Akuressa</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>0413411402</strong>
 						<br>
-						<i class="fas fa-gmail mr-3"></i>
+						
 						<strong>virajadrivingschool@gmail.com</strong>
 						<br>
-						<i class="fas fa- mr-3"></i>
+						
 						<strong>Reg No: DS 234</strong>
 					</p>
 				</div>

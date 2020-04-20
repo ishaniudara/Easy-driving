@@ -1,5 +1,6 @@
 .navbar-brand{
 	font-size: 50px;
+	font-family: 'Righteous', cursive;
 }
 nav{
 	color: gray;
@@ -16,11 +17,13 @@ nav{
 	bottom: 220px;
 }
 .carousel-caption h5{
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: bold;
-	letter-spacing: 2px;
+	letter-spacing: 5px;
 	font-weight: 300px;
-	color: #ffffff;
+	color: #f8f8fa;
+	font-family:  'Playfair Display', serif;
+
 }
 .carousel-caption p{
 	font-size: 20px;
@@ -30,7 +33,22 @@ nav{
 	font-family: poppins;
 }
 .navbar-nav a{
-	font-size: 18px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ffff;
+
+}
+.navbar-nav a{
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color :blue;
+}
+
+
+.navbar-nav a:active{
+	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: #ffff;
@@ -63,7 +81,7 @@ img{
 .welcome h3 {
 	font-size: 40px;
 	font-weight: bold;
-	font-color: red;
+	color: red;
 	padding-top: 40px;
 
 }

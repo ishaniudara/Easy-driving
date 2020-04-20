@@ -1,0 +1,22 @@
+.fc-toolbar .fc-state-active, .fc-toolbar .ul-state-active{
+    background-color:blue;
+    color:white;
+
+} 
+.fc-widget-header{
+    background-color:yellow;
+    font-family:times new romes;
+    font-size:15px;
+}
+.fc-day-grid{
+    background-color:rgba(240,229,128);
+}
+.fc-button-group{
+    background-color:red;
+}
+.fc-state-default{
+    background-color:greenyellow;
+}
+.fc .fc-button-group{
+    background-color:greenyellow;
+}
