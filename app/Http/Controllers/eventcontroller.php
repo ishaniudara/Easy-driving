@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\event;
+use App\crevent;
 use MaddHatter\LaravalFulcalendar\Facades\Calendar;
 
 class eventcontroller extends Controller
 {public function getevent(){
-    $events=event::all();
+    $events=crevent::all();
     $event=[];
    
     foreach($events as $row){
@@ -37,7 +37,7 @@ public function display(){
     return view('admin.views.addevent');
 }
 public function store(Request $request){
-    $events=new event;
+    $events=new crevent;
     $events->title=$request->input('title');
     $events->color=$request->input('color');
    
@@ -51,22 +51,22 @@ public function store(Request $request){
 
 }
 public function showtime(){
-    $events=event::all();
+    $events=crevent::all();
        return view('admin.views.timebook')->with('events',$events);
    }
 public function show(){
- $events=event::all();
+ $events=crevent::all();
     return view('admin.views.display')->with('events',$events);
 }
 public function del($id){
-    $events=event::find($id);
+    $events=crevent::find($id);
     $events->delete();
     return redirect()->back();
 
 }
 public function search(Request $request){
     $search=$request->get('search');
-$events=event::where('title','like', '%'.$search.'%')->paginate(5);
+$events=crevent::where('title','like', '%'.$search.'%')->paginate(5);
 return view('admin.views.timebook')->with('events',$events);
     
 }

@@ -1,15 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 Route::get('/', function () {
     return view('hom');
@@ -27,9 +18,6 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/payment', function () {
-    return view('admin.views.payment');
-});
 
 
 Route::get('/userdashboard', function () {
@@ -50,30 +38,50 @@ Route::get('/makeappointment', function () {
 
 Route::get('/timebook','eventController@showtime');
 
+Route::post('/save','applycontroller@store');
+Route::post('/book','bookcontroller@store');
 
-
-Route::get('/dashboard', function () {
-    return view('admin.views.dashboard');
-});
-Route::get('/index', function () {
-    return view('index');
-});
-Route::get('/user', function () {
-    return view('admin.views.user');
-});
-
-Route::get('/a', function () {
-    return view('admin.views.a');
-});
+Route::get('/searchtime','eventcontroller@search');
 
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/save','applycontroller@store');
+
+
+
+
+Route::group(['middleware' => ['auth','admin']], function(){
+
+    Route::get('/dashboard', function () {
+        return view('admin.views.dashboard');
+    });
+    Route::get('/user', function () {
+        return view('admin.views.user');
+    });
+    Route::get('/time', function () {
+        return view('time');
+    });
+    
+    Route::get('/payment', function () {
+        return view('admin.views.payment');
+    });
+    
+    Route::get('/report', function () {
+        return view('report');
+    });
+    
+    Route::get('/appointments', function () {
+        return view('appointments');
+    });
+    
+    Route::get('/user','getcontroller@getdata');
+
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
 Route::post('/adduser','applycontroller@store');
-Route::get('/user','getcontroller@getdata');
+
 Route::get('/deleteuser/{id}','getcontroller@deluser');
 Route::get('/edituser/{id}','getcontroller@eduser');
 Route::get('/editrep/{id}','getreportcontroller@edapp');
@@ -88,9 +96,9 @@ Route::post('/addreport','reportcontroller@store');
 
 Route::get('/search','getreportcontroller@search');
 Route::get('/searchuser','getcontroller@search');
-Route::get('/searchtime','eventcontroller@search');
+
 Route::get('searchapp','bookcontroller@search');
-Route::post('/book','bookcontroller@store');
+
 Route::get('/appointments','bookcontroller@getbook');
 Route::get('/report','getreportcontroller@getdata');
 Route::get('/viewreport/{id}','getreportcontroller@viewdata');
@@ -101,10 +109,4 @@ Route::resource('/events','eventcontroller');
 Route::get('/displaydata','eventcontroller@show');
 Route::get('/delevent/{id}','eventcontroller@del');
 Route::get('/delrep/{id}','getreportcontroller@del');
-Route::group(['middleware' => ['auth','admin']], function(){
-
-    Route::get('/dashboard', function () {
-        return view('admin.views.dashboard');
-    });
-
 });

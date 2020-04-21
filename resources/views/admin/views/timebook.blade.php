@@ -23,9 +23,9 @@
     <div class="col-md-4">
 
 <form action="/searchtime" method="get">
-<div class="form-group">
+<div class="input-group">
 <input type="search" name="search" placeholder="Search time" class="form-control" style="margin-right:0px;">
-<span class="form-group-btn">
+<span class="input-group-prepend">
 <button class="btn btn-primary" type="submit">
   search
   <i class="fas fa-search"></i>
